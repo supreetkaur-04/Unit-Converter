@@ -113,7 +113,7 @@ public class BackgroundTask extends SwingWorker<ConversionResult, Void> {
         progressBar.setString("Performing conversion...");
         
         JButton cancelButton = new JButton("Cancel");
-        cancelButton.addActionListener(_ -> {
+        cancelButton.addActionListener(e -> {
             if (task.cancel(true)) {
                 progressDialog.dispose();
             }
